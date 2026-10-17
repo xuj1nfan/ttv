@@ -1,0 +1,61 @@
+{
+  "scheduler": {
+    "type": "fixed",
+    "checkpoints": [0.2, 0.5, 0.8]
+  },
+  "intervention": {
+    "conflict_threshold": 0.80,
+    "insufficient_threshold": 0.85
+  },
+  "verifier": {
+    "type": "mock",
+    "responses": {
+      "案件材料记载张某拿走了他人手机。": {
+        "support": 0.94,
+        "conflict": 0.02,
+        "insufficient": 0.04
+      },
+      "张某取得手机时使用了暴力。": {
+        "support": 0.03,
+        "conflict": 0.92,
+        "insufficient": 0.05
+      },
+      "张某此前曾因同类行为被判刑。": {
+        "support": 0.04,
+        "conflict": 0.04,
+        "insufficient": 0.92
+      }
+    }
+  },
+  "generator": {
+    "type": "mock",
+    "steps": [
+      "首先识别材料中的行为人及财物。",
+      "案件材料记载张某拿走了他人手机。",
+      "材料还记载张某随后出售了该手机。",
+      "接下来检查取得手机时的行为方式。",
+      "张某取得手机时使用了暴力。",
+      "继续沿用上一判断分析取得财物的方式。",
+      "接下来检查材料是否包含行为人前科。",
+      "张某此前曾因同类行为被判刑。",
+      "继续沿用上一判断考虑前科情况。",
+      "汇总已确认事实和仍然未决的信息。"
+    ],
+    "feedback_responses": {
+      "5": "重新核对原文：材料明确记载未使用暴力或威胁，应撤回使用暴力的命题。",
+      "8": "材料没有说明前科情况，应保持未决，不把前科作为既定事实。"
+    },
+    "answer": "Mock baseline：沿用使用暴力和存在前科的错误命题。",
+    "answer_after_feedback": "Mock 演示结论：撤回使用暴力的判断；前科保持未决；仅依据已记载事实继续单罪名分析。"
+  },
+  "case": {
+    "id": "mock-legal-001",
+    "text": "张某趁店员离开柜台时拿走他人手机，随后将手机出售。案件材料明确记载，取得手机时未使用暴力或威胁。材料未说明张某此前是否受过刑事处罚。"
+  },
+  "runner": {
+    "max_steps": 100
+  },
+  "output": {
+    "trace_dir": "results/traces"
+  }
+}
