@@ -1,0 +1,6 @@
+{"probe_id":"support-no-violence","premise":"张某趁店员离开柜台时拿走手机。材料明确记载，取得手机时未使用暴力或威胁。","hypothesis":"张某取得手机时未使用暴力或威胁。","expected_label":"support"}
+{"probe_id":"conflict-no-violence","premise":"张某趁店员离开柜台时拿走手机。材料明确记载，取得手机时未使用暴力或威胁。","hypothesis":"张某取得手机时使用了暴力。","expected_label":"conflict"}
+{"probe_id":"insufficient-prior","premise":"张某趁店员离开柜台时拿走手机。材料未说明张某此前是否受过刑事处罚。","hypothesis":"张某此前曾因同类行为被判刑。","expected_label":"insufficient"}
+{"probe_id":"support-violence","premise":"李某为取得王某的手机，当场殴打王某并强行拿走手机。","hypothesis":"李某当场使用暴力取得手机。","expected_label":"support"}
+{"probe_id":"conflict-violence","premise":"李某为取得王某的手机，当场殴打王某并强行拿走手机。","hypothesis":"李某取得手机时没有使用暴力。","expected_label":"conflict"}
+{"probe_id":"insufficient-prior-2","premise":"李某为取得王某的手机，当场殴打王某并强行拿走手机。材料未说明李某此前的刑事处罚情况。","hypothesis":"李某此前曾被判刑。","expected_label":"insufficient"}

@@ -1,0 +1,38 @@
+{
+  "seed": 42,
+  "deployment": {
+    "qwen_revision": null,
+    "vllm_version": null,
+    "notes": "Fill with the actual serving model revision, version and launch settings before freezing experiments"
+  },
+  "data": {
+    "cases": "data/cail2018/dev.jsonl",
+    "labels": "data/cail2018/labels.json"
+  },
+  "generator": {
+    "base_url": "http://127.0.0.1:8000/v1",
+    "model": "qwen3-8b",
+    "api_key_env": "LOCAL_LLM_API_KEY",
+    "timeout": 180,
+    "temperature": 0.7,
+    "top_p": 0.8,
+    "max_tokens": 512,
+    "json_mode": true,
+    "extra_body": {
+      "top_k": 20,
+      "chat_template_kwargs": {"enable_thinking": false}
+    }
+  },
+  "verifier": {
+    "model_name": "/data/xujinfan/nli_experiment/models/pretrained/xlm-roberta-large-xnli",
+    "device": "cuda:1",
+    "max_length": 512,
+    "temperature": 1.0,
+    "revision": null,
+    "local_files_only": true
+  },
+  "intervention": {
+    "conflict_threshold": 0.9,
+    "insufficient_threshold": 0.95
+  }
+}

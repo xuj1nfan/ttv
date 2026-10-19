@@ -1,0 +1,6 @@
+# Install a torch build compatible with the GPU node's CUDA/driver first.
+# Qwen serving may use its own environment; the HTTP client needs only stdlib.
+torch>=2.6,<3
+transformers>=4.51,<5
+sentencepiece>=0.2,<0.3
+safetensors>=0.4,<1

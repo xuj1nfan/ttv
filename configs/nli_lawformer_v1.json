@@ -1,0 +1,10 @@
+{
+  "verifier": {
+    "model_name": "/data/xujinfan/nli_experiment/models/finetuned/Lawformer-NLI",
+    "device": "cuda:1",
+    "max_length": 512,
+    "temperature": 1.0,
+    "revision": null,
+    "local_files_only": true
+  }
+}

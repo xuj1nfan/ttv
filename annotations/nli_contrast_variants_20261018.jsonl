@@ -1,0 +1,4 @@
+{"probe_id":"damage-explicit-conflict","case_id":"cail-dev-3501","hypothesis":"张1某损毁的不是32块公交候车亭玻璃，而是3块。","expected_label":"conflict"}
+{"probe_id":"actor-explicit-conflict","case_id":"cail-dev-15668","hypothesis":"持匕首捅伤李某的不是骆某，而是被告人曹某。","expected_label":"conflict"}
+{"probe_id":"invoice-explicit-conflict","case_id":"cail-dev-1882","hypothesis":"张某共虚开了6份增值税专用发票，而不是5份。","expected_label":"conflict"}
+{"probe_id":"poppy-explicit-conflict","case_id":"cail-dev-14872","hypothesis":"孟某某种植的罂粟不是592株，而是295株。","expected_label":"conflict"}

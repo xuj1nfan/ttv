@@ -1,0 +1,2 @@
+{"case_id":"synthetic-smoke-1","case_text":"张某趁店员离开柜台时拿走他人手机，随后出售。材料明确记载，取得手机时未使用暴力或威胁。","gold_charge":"盗窃","split":"synthetic_smoke"}
+{"case_id":"synthetic-smoke-2","case_text":"李某为取得王某的手机，当场殴打王某并强行拿走手机，随后逃离。","gold_charge":"抢劫","split":"synthetic_smoke"}
